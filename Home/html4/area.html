@@ -1,29 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ZOO</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <style>
         *{ font-family: 'Shantell Sans', cursive;
-      
         }
-        .map{ width: 50%;
-            float: right;
-        }
-        img {
-            width: 80%;
+        img {width: 45%;
             float :right; 
         }
         h1 { background: url('pictures/yellow.webp') repeat;
              text-align: center;
              margin-bottom: 0;
         }
-        ul { 
+        .list { 
             list-style-type: none;
         }
         .menu { 
@@ -36,6 +31,7 @@
         }
         li,ul {
             padding-left: 10px;
+            list-style-position: inside;
         }
         .navig{
             width: 30%;
@@ -46,7 +42,7 @@
             padding-left:40%;
         }
     </style>
-      <!-- <script type="text/javascript">
+       <!-- <script type="text/javascript">
         function init() {
             if (document.layers) document.captureEvents(Event.MOUSEMOVE);
             document.onmousemove = mousemove;
@@ -64,7 +60,7 @@
             document.getElementById('xy').innerHTML = "x = " + mouse_x + ", y = " + mouse_y;
         }
         init()
-        </script>  -->
+        </script>   -->
 </head>
 <body>
     <div >
@@ -81,27 +77,29 @@
             <li>Видео</li>
            </ul>
         </div>
-        <div class="map">
             <img src="pictures/plan.png" alt="План зоопарка"  usemap="#animal">
                 <map name="animal">
-                    <area shape="poly" coords="2,11,63,10, 108,56,120,127,95,150,76,175,9,212" href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%BD%D0%B4%D0%B0" alt="Панда">
-                    <area shape="poly" coords="176,130,242,102,316,102,350,105,355,154,290,185,222,198" href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BB%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5" alt="Слон">
-                    <area shape="poly" coords="360,185,425,165,475,208,430,246,338,260" href="https://ru.wikipedia.org/wiki/%D0%9B%D0%B5%D0%B2" alt="Лев">
-                    <area shape="poly" coords="35,224,83,212,136,194,155,207,189,250,170,293,83,316,16,300" href="https://ru.wikipedia.org/wiki/%D0%96%D0%B8%D1%80%D0%B0%D1%84" alt="Жираф">
+                   <area shape="poly" coords="351,430,400,390,500,400,560,420,540,510,380,510" href="https://ru.wikipedia.org/wiki/%D0%97%D0%B5%D0%B1%D1%80%D1%8B" alt="зебра">
+                     <area shape="poly" coords="4,10,92,8,160,80,180,150,110,220,6,280,9,132" href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%BD%D0%B4%D0%B0" alt="Панда">
+                    <area shape="poly" coords="230,186,305,139,390,133,470,155,440,230,303,266,225,216" href="https://ru.wikipedia.org/wiki/%D0%A1%D0%BB%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5" alt="Слон">
+                    <area shape="poly" coords="
+                    424,274,560,220,617,240,613,305,470,350,420,300" href="https://ru.wikipedia.org/wiki/%D0%9B%D0%B5%D0%B2" alt="Лев"> 
+                    <area shape="poly" coords="30,366,94,300,163,252,232,292,261,383,170,406,43,420" href="https://ru.wikipedia.org/wiki/%D0%96%D0%B8%D1%80%D0%B0%D1%84" alt="Жираф"> 
                 </map>
-        </div>
+        
         <div class="navig">
             <h2>При наведении на карту появится ссылка с доп информацией для следующих животных:</h2>
-            <ul>
+            <ul class="list">
                 <li>Панда</li>
                 <li>Слон</li>
                 <li>Лев</li>
                 <li>Жираф</li>
+                <li>Зебра</li>
             </ul>
         </div>
         <div style="clear: both;"></div>
     </div>
-        <!-- <span id="xy"></span> -->
 
+         <!-- <span id="xy"></span> -->
 </body>
 </html>
