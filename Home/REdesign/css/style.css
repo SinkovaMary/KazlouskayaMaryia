@@ -13,7 +13,18 @@ body {
     color: #2b2c54;
     height: 10000px;
 }
-
+ .wrap{
+    width: 1920px;
+    position: relative;
+    border: solid blue 1px;
+    margin: 0 auto;
+    background: url('../img/BigTop.png') no-repeat 592px 0px,
+    url('../img/BigCenter.png') no-repeat 0px 1177px,
+    url('../img/BigCenter2.png')no-repeat 0px 1268px,url('../img/BigEnd.png') no-repeat 0px 2956px,
+    url('../img/BigEnd2.png')no-repeat 0px 3000px;
+  z-index: 1;
+ 
+ }
 .container {
     width: 1680px;
     margin: 0 auto;
@@ -243,12 +254,27 @@ p.opacity{
     margin-top: 52px;
 }
 
-.program__block ul li {
+.program__block ul li:nth-child(1) {
     padding: 30px;
+ 
     padding-top: 300px;
     width: 541px;
     height: 609px;
     background: url('../img/program1.png') no-repeat center;
+}
+.program__block ul li:nth-child(2) {
+    padding: 30px  ;
+    padding-top: 300px;
+    width: 541px;
+    height: 609px;
+    background:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../img/classmates.png') no-repeat center;
+}
+.program__block ul li:nth-child(3) {
+    padding: 30px  ;
+    padding-top: 300px;
+    width: 541px;
+    height: 609px;
+    background:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../img/twoChildren.png') no-repeat center;
 }
 
 
@@ -299,7 +325,7 @@ p.opacity{
     width: 100%;
 }
 
-.teachers ul li:before {
+.teachers ul li::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -311,8 +337,8 @@ p.opacity{
     z-index: -1;
     transition: 0.5s;
 }
-.teachers ul li:hover::before{
-    background: url("../img/fon_trap_hover.png") center no-repeat;
+ .teachers ul li:hover::before{
+    background: url('../img/fon_trap_hover.png') center no-repeat;
     background-size: 100% 90%;
 }
 
@@ -338,7 +364,6 @@ p.opacity{
     align-items: center;
     justify-content: center;
     margin-top: 120px;
-    width: 805px;
     height: 242px;}
 
 .form .explain{
@@ -358,7 +383,7 @@ margin: 0 auto;
 }
 .choice span::before{
     content: '';
-    background:url('../img/line2.png') no-repeat;
+    background:url('../img/line.png') no-repeat;
     width: 100%;
     height: 100%;
     position: absolute;
