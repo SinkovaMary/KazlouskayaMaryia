@@ -1,0 +1,31 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+    padding-left: 15px;
+    background: url('extref.png') no-repeat 3px;
+
+}
+
+.birthday {
+    color: green;
+}
+
+.chemp {
+    color: red;
+}
+
+.text {
+    color: purple;
+    margin-bottom: 20px;
+}
+
+
+a:last-of-type {
+    margin: 0px;
+}

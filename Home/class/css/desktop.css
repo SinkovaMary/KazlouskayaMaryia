@@ -1,0 +1,10 @@
+
+.header { background-color: brown; }
+.wrap { display: flex;}
+.menu {background-color: blue;
+    flex-grow: 1;}
+.content{background-color:yellow;
+flex:0 1 800px}
+.banner { background-color:pink;
+flex-grow: 1;}
+.footer { background-color: orange}

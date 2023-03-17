@@ -1,0 +1,5 @@
+@media all  and (max-width:720px)
+{ .wrap { display: flex;
+flex-direction: column;}
+
+}
