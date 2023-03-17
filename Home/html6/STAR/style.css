@@ -1,0 +1,26 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ul {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+}
+
+li {
+    list-style-type: none;
+    background: url('star0.png') no-repeat;
+    width: 100px;
+    height: 100px;
+}
+
+li:hover,
+li:hover~li {
+    background: url('star1.png') no-repeat;
+    width: 100px;
+    height:
+        100px;
+}
