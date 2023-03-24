@@ -1,0 +1,46 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ 
+a {
+    font-weight: 400;
+}
+p{padding-bottom: 10px;}
+.name{
+    font-weight: 700;
+    font-size: 20px;
+}
+.birthday {
+    color: green;
+}
+ 
+.chemp {
+    font-weight: 600;
+    color: red;
+}
+ 
+.text {
+    color: blue;
+ margin-top: 10px;
+ font-style: italic;
+ line-height:23px;
+}
+ 
+a::before {
+    content: '';
+    background-image: url('extref.png');
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 0px
+}
+ 
+a:last-of-type::before {
+    content: none;
+}
+ 
+a:last-of-type {
+    margin: 0px;
+}
