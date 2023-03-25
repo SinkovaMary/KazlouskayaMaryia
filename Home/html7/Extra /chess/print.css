@@ -1,0 +1,17 @@
+@media print{
+    a{margin-left: 55px;
+    margin-right: 5px;}
+   a::before{
+    content:  "ссылка";
+    position:absolute ;
+    left: -5x;
+   } 
+   a::after{
+    content: ""attr(href)"";
+   }
+   a:last-child::after{
+    visibility: hidden;
+   }
+   
+
+}

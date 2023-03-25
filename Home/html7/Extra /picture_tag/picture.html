@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Для наглядности иcпользования тега &lt;picture&gt; я создала медиазапросы и к нему условия:</p>
+    <ul>
+        <li>max-width:400px- загрузится картинка с медведем</li>
+        <li>max-width:800px-загрузится картинка с лисой </li>
+        <li>max-width:1000px-загрузится картинка с китом и если ни одно из условий не подходит ,то загрузится картинка с китом с тега &lt;img&gt;</li>
+    </ul>
+    <picture>
+         <source media="(max-width:400px)" srcset="bear.jpeg">
+        <source media="(max-width:800px)"  srcset="fox.jpeg">
+        <source media="(max-width:1000px)" srcset="whale.jpeg ">
+<img src="whale.jpeg" alt="">
+    </picture>
+</body>
+
+</html>
