@@ -11,15 +11,16 @@
 <body>
     <p>Для наглядности иcпользования тега &lt;picture&gt; я создала медиазапросы и к нему условия:</p>
     <ul>
-        <li>max-width:400px- загрузится картинка с медведем</li>
-        <li>max-width:800px-загрузится картинка с лисой </li>
-        <li>max-width:1000px-загрузится картинка с китом и если ни одно из условий не подходит ,то загрузится картинка с китом с тега &lt;img&gt;</li>
+        <li>max-width:400px (т.е от 0px до 400px)  - загрузится картинка с медведем</li>
+        <li>max-width:800px(т.е от 401px до 800px)-загрузится картинка с лисой </li>
+        <li>max-width:1000px(т.е от 801px до 1000px)-загрузится картинка с китом.</li>
+        <li>Если ни одно из условий не подходит , а именно экран свыше 1001px ,то загрузится картинка с пандой из тега &lt;img&gt;</li>
     </ul>
     <picture>
          <source media="(max-width:400px)" srcset="bear.jpeg">
         <source media="(max-width:800px)"  srcset="fox.jpeg">
         <source media="(max-width:1000px)" srcset="whale.jpeg ">
-<img src="whale.jpeg" alt="">
+<img src="panda.jpeg" alt="панда">
     </picture>
 </body>
 
