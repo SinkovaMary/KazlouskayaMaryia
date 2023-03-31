@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            display: none;
+        }
+
+        label {
+            position: relative;
+        }
+
+        label::before {
+            content: '';
+            width: 311px;
+            height: 180px;
+            background: url(buttom.png) no-repeat;
+            position: absolute;
+            border: 1px solid black;
+            left: -57px;
+            top: -60px;
+
+        }
+        input:checked+label::before{
+            content: '';
+            width: 311px;
+            height: 180px;
+            background: url(buttom.png) no-repeat 0px -128px;
+            position: absolute;
+            border: 1px solid black;
+            left: -57px;
+            top: -68px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="buttom" id="on">
+    <label for="on"> </label>
+</body>
+
+</html>

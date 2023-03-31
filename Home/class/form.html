@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleForm.css">
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form action="http://fe.it-academy.by/TestForm.php">
+        <div><label >Full Name<input type="text" value="" name="FullName" placeholder="Full Name"></label></div>
+        <div><label >Email<input type="email" value="" name="Email" placeholder="Email"></label></div>
+        <div><label >Password<input type="password" value="" name="Password" placeholder="Password "></label></div>
+        <div><label >Data of Birth<input type="date" value="" name="FullName" ></label></div>
+        <div>
+            <label for=""> Country
+                <select name="country" id="">
+                    <option value="Poland">Poland</option>
+                    <option value="USA">USA</option>
+                    <option value="Italy">Italy</option>
+                </select>
+        
+            </label>
+        </div>
+        <div><label >Gender<input type="checkbox" value="Female" name="gender">Female
+            <input type="checkbox" value="" name="gender" placeholder="Full Name">Male</label>
+            <input type="checkbox" value="" name="gender" placeholder="Full Name">Unknown</label></div>
+            <div><label >Meal Preferance<input type="radio" value="low" name="calories" >Low calories
+                <input type="radio" value="low" name="calories" >Low salt</label></div>
+               <div><textarea name="review" id="" cols="30" rows="10"></textarea></div>
+                <input type="submit">
+    </form>
+
+</body>
+</html>

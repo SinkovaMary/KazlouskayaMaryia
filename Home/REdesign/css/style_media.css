@@ -1,0 +1,31 @@
+@media all and (max-width: 1760px){
+    .container {
+        width: 1200px;
+    }
+    .header ul li {
+        margin-right: 30px;
+    }
+    .program__block ul {
+        justify-content: space-around;
+        flex-flow: wrap;
+    }
+    .program__block ul li:nth-child(3){
+        margin-top: 40px;
+    }
+    .program_college ul {
+        justify-content: center;
+        flex-wrap: wrap; }
+        .program_college li.WomanrArt{
+            margin-bottom: 40px;
+        }
+        .teachers ul {
+            flex-flow: wrap;
+            justify-content: space-around;}
+
+
+.otzyv {
+    flex-wrap: wrap;}
+    li.third{
+        margin-top: 30px;
+    }
+}
