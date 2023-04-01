@@ -18,10 +18,12 @@
         .program_college li.WomanrArt{
             margin-bottom: 40px;
         }
-        .teachers ul {
-            flex-flow: wrap;
-            justify-content: space-around;}
-
+        .teachers ul li:last-child{
+            display: none;
+        }
+        li.third{
+            display: none;
+        }
 
 .otzyv {
     flex-wrap: wrap;}

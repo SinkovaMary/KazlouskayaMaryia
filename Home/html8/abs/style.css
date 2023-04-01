@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+.image{
+   position: relative;
+   width: 400px;
+   height: 423px;
+   left: calc(50vw - 200px);
+   /* border: 1px solid red; */
+}
+.image img{
+    position: absolute;
+}
+img:nth-child(1):hover{
+    z-index: 2;
+    
+  }
+img:nth-child(2){
+  right:0px;
+}
+img:nth-child(2):hover{
+   z-index: 2;
+  }
+img:nth-child(3){
+    bottom:0px;
+    right: 100px;
+  }
+img:nth-child(3):hover{
+  z-index: 2;
+  }
+ img:nth-child(4){
+   top: 50%;
+   left: 50%;
+   margin-top: -128px;
+   margin-left: -128px;
+  }
+p{
+    width: 100vw;
+    margin: 0 auto;
+}

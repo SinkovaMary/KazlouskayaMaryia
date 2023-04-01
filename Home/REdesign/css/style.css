@@ -521,7 +521,8 @@ img.otzyv_name {
     margin-top: 23px;
 }
 .stars {
-    display: flex;}
+    display: flex;
+    margin-right: 22px;}
 
 .star1,
 .star2,
@@ -547,7 +548,7 @@ margin-top: 20px;
     justify-content: end;
 }
 .header_end h4{
-    margin-right: 212px;
+    margin-right: 194px;
 }
 
 .love{height: 12px;
