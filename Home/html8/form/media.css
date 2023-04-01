@@ -1,0 +1,13 @@
+@media all and (max-width:870px){
+    p{
+        display: flex;
+        overflow-wrap: break-word;
+    }
+    .title, select,span{
+        display: block;
+    }
+    span{
+        margin-bottom: -5px;
+    }
+
+}
