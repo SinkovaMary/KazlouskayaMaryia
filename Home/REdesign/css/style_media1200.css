@@ -1,0 +1,243 @@
+@media all and (max-width:1200px) {
+    .container {
+        width: 800px;
+    }
+
+    .header img {
+        width: 100px;
+    }
+
+    .header ul {
+        display: none;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .humb {
+        display: block;
+        background: url(../img/humb.png) no-repeat right top;
+        width: 52px;
+        height: 52px;
+    }
+
+    h2 {
+        margin-top: 57px;
+        font-size: 32px;
+    }
+
+    h2.icon__left span::before {
+        background-size: 46%;
+        background-repeat: no-repeat;
+        background-position: 30px 20px;
+    }
+
+    .program__block ul li.rotate_block {
+        height: 377px;
+        width: 334px;
+        padding-top: 117px;
+    }
+
+    .rotate_block h6 {
+        font-size: 16px;
+    }
+
+    .rotate_block h4 {
+        font-size: 24px;
+    }
+
+    .btn_1 {
+        width: 153px;
+        height: 44px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    h2.icon__right span::after {
+        background-size: 46%;
+        background-repeat: no-repeat;
+        background-position: 180px 8px;
+    }
+
+    p.explain {
+        margin-top: 23px;
+    }
+
+    .program_college li.WomanrArt,
+    .program_college li.YoungGraphic {
+        width: 688px;
+        height: 381px;
+        padding-top: 111px;
+    }
+
+    .teachers ul li:nth-child(3) {
+        display: none;
+    }
+
+    .teachers ul li img {
+        width: 266px;
+        height: 287px;
+        margin: 0 auto;
+    }
+
+    .teachers ul {
+        justify-content: center;
+    }
+
+    .teachers ul li {
+        width: 364px;
+        height: 398px
+    }
+
+    .teachers ul li::before {
+        background-size: 80%;
+        background-position: 29px 18px;
+    }
+
+    .teachers ul li:hover {
+
+        background-size: 266px 287px;
+    }
+
+    .teachers ul li:hover::before {
+        background-size: 77%;
+        background-position: 25px 12px;
+    }
+
+    .teachers ul li p {
+        width: 334px;
+        height: 59px;
+        padding-top: 20px;
+    }
+
+    div.form {
+        margin-top: 92px;
+    }
+
+    h3 {
+        font-size: 24px;
+        line-height: 28.8px;
+    }
+
+    p.opacity {
+        font-size: 18px;
+        width: 511px;
+    }
+
+    h2.icon__center span::before {
+        background-size: 74%;
+        background-position: 0px -1px;
+    }
+
+    .form .btn_1 {
+        width: 230px;
+        height: 44px;
+    }
+
+    .choice {
+        height: 1220px;
+        width: 800px;
+    }
+
+    .choice p.opacity {
+        width: 334px;
+    }
+
+    .choice li {
+        height: 244px;
+    }
+
+    .choice h5 {
+        margin-top: 6px;
+    }
+
+    .foto_label img {
+        height: 385px;
+        margin-left: 350px;
+        margin-top: -275px;
+    }
+
+    .choice li:last-child h5.modern {
+        display: none;
+    }
+
+    .choice li:last-child h5.new {
+        display: block;
+    }
+
+    .choice_fon {
+        height: 1475px;
+    }
+
+    .otzyv li {
+        width: 334px;
+        height: 237px;
+    }
+
+    p.otzyv_text {
+        width: 292px;
+        height: 95px;
+    }
+
+    .otzyv_second .otzyv_text {
+        width: 294px;
+        height: 44px;
+    }
+
+    .otzyv img {
+        height: 19px;
+    }
+
+    ul.footer_info {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .footer_info p,
+    .footer_menu li {
+        color: #F6F4FE;
+        font-size: 16px;
+    }
+
+    .footer_menu li,
+    .footer_program li,
+    .contact li {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .menu,
+    .footer_program,
+    .contact {
+        font-size: 16px;
+        margin-top: 18px;
+    }
+
+    .footer_program {
+        order: 4;
+        width: 215px;
+    }
+
+    .contact {
+        width: 334px;
+    }
+
+    .footer_info h5 {
+        font-size: 16px;
+    }
+
+    .footer_fon {
+        background: url(../img/footer_fon.png) no-repeat center 20px, url(../img/footer_fon2.png) repeat-y center 540px;
+        height: 1000px;
+    }
+    .cards{
+        width:621px;
+        margin-left: 60px;
+        margin-top: 47px;
+    }
+    .cards img {
+        
+        margin-top: 14px;
+        width: 86px;
+        height: 48px;}

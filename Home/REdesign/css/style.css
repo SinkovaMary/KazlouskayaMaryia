@@ -124,6 +124,9 @@ p.opacity {
     font-weight: 400;
     opacity: 0.7
 }
+.humb{
+    display: none;
+}
 
 .btn {
     display: flex;
@@ -214,7 +217,7 @@ p.opacity {
     position: sticky;
     z-index: 0;
     background: url('../img/BigTop.png') no-repeat ;
-    background-position: top right 10%;
+    background-position: top right ;
 }
 .header .container {
     display: flex;
@@ -410,7 +413,12 @@ div.form {
     margin: 0 auto;
 }
 
-.choice img {}
+.choice li:last-child h5.modern{
+    display: block;
+}
+.choice li:last-child h5.new{
+    display: none;
+}
 
 .choice span::before {
     content: '';
