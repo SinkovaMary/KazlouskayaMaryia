@@ -214,7 +214,7 @@ p.opacity {
 
 /* header */
 .header_fon{
-    position: sticky;
+    position: relative;
     z-index: 0;
     background: url('../img/BigTop.png') no-repeat ;
     background-position: top right ;
