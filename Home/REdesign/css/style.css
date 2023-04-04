@@ -218,6 +218,7 @@ p.opacity {
     z-index: 0;
     background: url('../img/BigTop.png') no-repeat ;
     background-position: top right ;
+    background-size: cover;
 }
 .header .container {
     display: flex;

@@ -1,13 +1,17 @@
 @media all and (max-width:870px){
-    p{
-        display: flex;
-        overflow-wrap: break-word;
+    label p{float: none;}
+    .title {
+        margin-left: 0px;
     }
-    .title, select,span{
+    select {
         display: block;
+        margin-left: 0px;
     }
-    span{
-        margin-bottom: -5px;
+    .publication>span:first-child {
+        margin-top: 8px;
+        margin-left: 0px;
     }
-
+    .publication>span{display: block;}
+ 
+    }
 }
