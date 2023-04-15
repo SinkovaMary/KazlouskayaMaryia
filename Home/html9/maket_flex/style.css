@@ -34,6 +34,7 @@ menu{
     padding: 20px;
 }
 section{
+    padding-left: 10px;
    background: url('image/ballIMG.png') repeat-y;
    background-color: white;
    background-position: 100%;
