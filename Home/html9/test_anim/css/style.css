@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+@keyframes pulse{
+    0% {transform: scale(1.5);}
+    50%{ transform: scale(1); }
+    100%{transform: scale(1.2);}
+}
+@keyframes flight{
+    from,to{ transform: translateY(-20px);}
+    10%,85%{transform: translateY(-10px)}
+    20%,70%{transform: translateY(0px)}
+    40%,60%{transform: translateY(10px)}
+    50%{transform: translateY(20px)}
+}
+ @keyframes alarm{
+    from,50%,to{ transform: rotate(0deg);}
+    7%,40%{transform: rotate(15deg)}
+    15%,33%{transform: rotate(30deg)}
+    25%{transform: rotate(45deg)}
+    60%,93%{transform: rotate(-15deg)}
+    68%,87%{transform: rotate(-30deg)}
+    77%{transform: rotate(-45deg)}
+   }
+
+.heart i{
+    font-size: 40px;
+    transition: 1s;
+    animation: pulse 1s linear infinite;
+    color: rgb(205, 36, 36);
+}
+.ghost i{ 
+    font-size: 40px;
+    color: rgb(0, 200, 255);
+}
+.wrapper:hover>.ghost {
+    animation: flight 4s linear infinite;
+}
+.bell i{font-size: 40px;
+    color: rgb(235, 235, 46);
+}
+.wrapper:hover>.bell {
+    animation: alarm 3s linear infinite;
+}

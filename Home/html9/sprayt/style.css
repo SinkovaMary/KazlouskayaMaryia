@@ -1,0 +1,22 @@
+@keyframes animation{}
+ 
+    .wrapper{
+        height: 100px;
+        display: flex;
+        align-items: center;
+    }
+.spraites{
+    width: 83px;
+    height: 105px;
+    background: url('Sprite2.png') 0 0;
+    animation: men 2s steps(8) infinite,
+    step 10s linear infinite;
+    position: absolute;
+    left: 0;
+   
+}
+@keyframes men{
+    to{background-position: -660px 0;}}
+    @keyframes step{
+        to{left: 100%;}
+    }

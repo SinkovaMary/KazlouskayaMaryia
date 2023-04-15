@@ -1,0 +1,18 @@
+@media all and (max-width:800px) {
+    header,footer{display: none;
+    }
+    section{background: none;}
+    .wrapper--menu{
+        flex-direction: column-reverse;
+    }
+    menu{
+        background-color: transparent;
+   
+    }
+    li{
+        list-style-type: none;
+        display:inline;
+        white-space: nowrap;
+        margin-right: 20px;
+    }
+}

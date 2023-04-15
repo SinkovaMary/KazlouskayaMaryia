@@ -1,0 +1,72 @@
+/* Reset CSS by Eric Meyer http://meyerweb.com/eric/tools/css/reset/ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+body { font-family: 'Roboto', sans-serif; width: 100vw; }
+
+.container { width: 1880px; margin: 0 auto; }
+
+p { font-size: 16px; color: #262626; font-weight: 300; }
+
+a { color: #515151; text-decoration: none; font-size: 14px; }
+
+nav { background-color: #f8f8f8; height: 45px; background-size: 100%; position: relative; z-index: 0; }
+nav ul { display: flex; justify-content: end; }
+nav ul li { position: relative; margin-top: 14px; margin-right: 20px; }
+nav ul li:first-of-type a { border: 1px solid; padding: 0 7px; border-radius: 12px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+nav ul li:last-child { position: relative; margin-top: 0px; margin-right: 0px; }
+nav ul li:last-child div.link-socset { display: flex; justify-content: end; position: absolute; }
+nav ul li:last-child div.link-socset a { margin-right: 13px; opacity: 0; padding: 5px 7px; position: relative; top: 10px; left: 16px; }
+nav ul li:last-child div.link-socset a:nth-last-child(4) { margin-right: 0px; }
+
+header { margin-bottom: 70px; }
+header .logo { display: flex; }
+header .logo img { margin-right: 13px; margin-top: 15px; }
+header .logo h2 { margin-top: 19px; font-family: 'Comfortaa',cursive; font-size: 26px; margin-right: 392px; }
+
+.info > ul { display: flex; }
+
+.menu { position: relative; margin-top: 12px; height: 34px; width: 178px; border-radius: 5px; background-color: #f2f2f2; font-size: 20px; font-weight: 300; }
+.menu > a { position: absolute; top: 6px; left: 42px; font-size: 20px; }
+.menu > a::before { content: ''; background: url(../image/burger.png) no-repeat left; width: 18px; height: 15px; position: absolute; left: -29px; top: 3px; }
+
+.sub-menu { position: absolute; top: 7px; padding-top: 27px; }
+.sub-menu li { height: 34px; width: 178px; border: 1px solid black; border-radius: 5px; background-color: #f2f2f2; font-size: 15px; font-weight: 300; }
+
+.sub-menu { display: none; }
+
+.menu > a:hover + .sub-menu { display: block; }
+
+form { position: relative; }
+
+.serch input[type="text"] { position: relative; border-radius: 5px; background-color: #f2f2f2; border: none; width: 578px; height: 34px; margin-top: 12px; margin-left: 30px; }
+.serch input[type="text"]::placeholder { position: relative; left: 25px; }
+
+.serch input[type="submit"] { position: absolute; right: 20px; top: 20px; background: url(../image/lupa.png) no-repeat center; width: 18px; height: 18px; border: none; }
+
+.telephone { margin-left: 54px; font-weight: 400; margin-top: 16px; margin-right: 48px; }
+.telephone a { font-size: 22px; border-bottom: 1px solid black; }
+
+.profile { align-self: center; margin-right: 56px; }
+.profile p::before { content: '\f007'; font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands'; margin-right: 8.5px; font-size: 21px; }
+
+.card { align-self: center; position: relative; margin-top: 6px; }
+.card p::before { width: 25px; height: 25px; content: ''; background: url("../image/cart.png") no-repeat center; position: absolute; background-size: 25px 25px; right: 134px; bottom: -2px; }
+
+.benefit ul { display: flex; justify-content: space-around; }
+.benefit ul img { margin-bottom: 25px; }
+.benefit ul p { font-size: 20px; line-height: 27px; margin-left: -70px; }
+.benefit ul p:hover { text-decoration: underline; text-decoration-line: 2px; text-decoration-color: #ffd801; text-underline-offset: 2px; }
+
+/*# sourceMappingURL=style.css.map */
