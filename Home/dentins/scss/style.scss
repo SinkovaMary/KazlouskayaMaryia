@@ -1,21 +1,60 @@
 @import 'nullstyle.scss';
+@mixin Robo300($font-size:16px,$color:rgba(38, 38, 38, 1),$font-weight: 300)
+   { font-family: 'Roboto', sans-serif;
+     font-size:  $font-size;
+     color: $color;
+     font-weight:$font-weight;
+}
+@mixin Robo_Con($font-size:30px,$color:rgba(38, 38, 38, 1),$font-weight: 300)
+   { 
+    font-family: 'Roboto Condensed', sans-serif;
+     font-size:  $font-size;
+     color: $color;
+     font-weight:$font-weight;
+}
+@mixin hoverUnderli{
+    text-decoration: underline;
+    text-decoration-line: 2px;
+    text-decoration-color:  rgba(255, 216, 1, 1);
+    text-underline-offset: 2px;}
+@mixin imgHover {content: '';
+    border: 1.5px solid rgba(255, 216, 1, 1);
+    border-radius: 50%;
+    position: absolute;
+    left:28px;
+    top:-2px;}
+@mixin imgCircle($background: url('../image/box.png')){
+    content: '';
+    background: $background ;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left:28px;
+    top:-2px;}
+
 body{
     font-family: 'Roboto', sans-serif;
     width: 100vw;
+    height: 3000px;
 }
 
 .container {
     width: 1880px;
     margin: 0 auto;
 }
+
 p{
-font-size: 16px;
-color:rgba(38, 38, 38, 1);
-font-weight: 300;
+@include Robo300;
 }
-a{ color: rgba(81, 81, 81, 1);
+a{
+    @include Robo300(14px,rgba(81, 81, 81, 1) ); 
     text-decoration: none;
-    font-size: 14px;
+}
+h3{@include Robo300(22px,rgba(38, 38, 38, 1) );
+    text-align: center;
+    line-height:28px;
 }
 // NAV
 
@@ -61,7 +100,6 @@ nav{
 
     //  Header/Верхняя панель
     header {margin-bottom: 70px;
-
     .logo{
         display: flex;
         img{margin-right: 13px;
@@ -161,6 +199,7 @@ p::before{
     }
 
     // Картинки  перед меню
+    .interim{margin-bottom: 60px;}
     .benefit ul{
         display: flex;
         justify-content: space-around;
@@ -169,10 +208,228 @@ p{font-size: 20px;
     line-height: 27px;
     margin-left: -70px;
    
-&:hover{
-   text-decoration: underline;
-   text-decoration-line: 2px;
-   text-decoration-color:  rgba(255, 216, 1, 1);
-   text-underline-offset: 2px;
-} }}
-       
+&:hover{ @include hoverUnderli} }}
+// Категориии
+menu{ margin-bottom: 70px;
+    display: flex;
+        flex-wrap: wrap;
+        p{@include Robo_Con(30px,rgba(84, 84, 84, 1)) }
+        li{ list-style: none;
+            margin-bottom: 35px;
+            position: relative;
+            &:nth-of-type(1){}
+            a{@include Robo_Con;
+                padding-left: 85px;
+                padding-right: 30px;
+                border-left: 1px solid #E8E8E8;
+                position: relative}
+                &:nth-of-type(2){
+                   &:hover>a{@include hoverUnderli;
+                    &::before {@include imgHover}}
+                    &>a{border-left: none; }}
+              &:nth-of-type(2)>a::before{
+                   @include imgCircle (url('../image/syrgenary.png'))} 
+                    &:nth-of-type(3){
+                   &:hover>a{@include hoverUnderli;
+                    &::before {@include imgHover}}}
+                    &:nth-of-type(3)>a::before{
+                       @include imgCircle(url('../image/orto.png'))}
+                        &:nth-of-type(4){
+                            &:hover>a{@include hoverUnderli;
+                             &::before {@include imgHover}}}
+                        &:nth-of-type(4)>a::before{
+                            @include imgCircle(url('../image/orto.png')) }
+                            &:nth-of-type(5){
+                                &:hover>a{@include hoverUnderli;
+                                 &::before {@include imgHover}}}
+                        &:nth-of-type(5)>a::before{
+                           @include imgCircle(url('../image/terapy.png')) }
+                           &:nth-of-type(6){
+                            &:hover>a{@include hoverUnderli;
+                             &::before {@include imgHover}}}
+                        &:nth-of-type(6)>a::before{
+                            @include imgCircle(url('../image/ortoped.png')) }
+                            &:nth-of-type(7){
+                                &:hover>a{@include hoverUnderli;
+                                 &::before {@include imgHover}}}
+                        &:nth-of-type(7)>a::before{
+                            @include imgCircle }
+                            &:nth-of-type(8){
+                                &:hover>a{@include hoverUnderli;
+                                 &::before {@include imgHover}}
+                                 &>a{border-left: none;
+                                padding-left: 70px; }}
+                        &:nth-of-type(8)>a::before{
+                            @include imgCircle(url('../image/total.png'));
+                            left:0px; }
+                            &:nth-of-type(9){
+                                &:hover>a{@include hoverUnderli;
+                                 &::before {@include imgHover}}}
+                        &:nth-of-type(9)>a::before{
+                            @include imgCircle(url('../image/syringe.png'))}
+                            &:nth-of-type(10){
+                                &:hover>a{@include hoverUnderli;
+                                 &::before {@include imgHover}}}
+                        &:nth-of-type(10)>a::before{
+                          @include imgCircle(url('../image/pin.png')) }
+                            &:nth-of-type(11){
+                                &:hover>a{@include hoverUnderli;
+                                 &::before {@include imgHover}}}
+                        &:nth-of-type(11)>a::before{
+                            @include imgCircle(url('../image/expendable.png')) }
+                            &:nth-of-type(12){
+                                &:hover>a{@include hoverUnderli;
+                                 &::before {@include imgHover}}}
+                        &:nth-of-type(12)>a::before{
+                            @include imgCircle(url('../image/accessories.png')) }
+                            button{ @include Robo_Con(20px);
+                                height: 40px;
+                                width: 142px;
+                                border-radius: 3px;
+                                border: 1px solid rgba(232, 232, 232, 1);
+                                background:  #FFFFFF;
+                                position: absolute;
+                                bottom: -7px;
+                            &:hover{ background-color: rgba(255, 216, 1, 1);
+                                transition: .5s;
+                            &:active{ background-color:rgb(237, 203, 13);
+                                transition: .2s;}} }}} 
+ // Популярные наборы (карочки товаров)
+ section{position: relative;
+    h1{ @include Robo300(40px,rgba(38, 38, 38, 1),100);
+        margin-bottom: 67px;
+&::before{content: '';
+position: absolute;
+width:138px;
+height: 5px;
+background-color: rgba(255, 216, 1, 1);
+top:46px;}}
+.product{
+    ul{display: flex;
+  
+    flex-wrap: wrap;
+    column-gap: 29px;
+row-gap: 78px;
+li{position: relative;
+    padding: 23px 13px;
+    height: 635px;
+width: 448px;
+border-radius: 3px;
+border: 1px solid rgba(233, 233, 233, 1);
+
+.NiTi{position: absolute;
+    bottom: 19px;
+    left: 13px;
+    height: 23px;
+    width: 80px;
+    border-radius: 2px;
+    background: #FFD801;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    p{@include Robo300(13px,rgba(0, 0, 0, 1) ,500)}
+}
+h3{margin-bottom: 19px;}
+.price-cart{ display: grid;
+    grid-template-columns: 173px 1fr;
+    grid-template-rows: 20px 20px;
+    grid-column-gap:26px;
+    margin-bottom: 14px;
+
+    .price{grid-column: 1;
+        grid-row: 1/3;
+        justify-self: end;
+   p{
+    &:nth-child(1){
+        @include Robo300(20px,#FFD801 ,300);
+        color: #FFD801;
+        text-decoration: solid;
+        text-decoration-line: line-through; }
+    &:nth-child(2){@include Robo300(20px,(0, 0, 0, 1) ,400)}
+   }}
+   .buy{ grid-column: 2;
+    grid-row: 1/3;
+    button{margin-top: 2px;
+        height: 34px;
+        width: 155px;
+        border-radius: 5px;
+        border: 2px solid rgba(255, 216, 1, 1);
+        background-color: rgba(255, 255, 255, 1);
+        @include Robo300(17px, rgba(0, 0, 0, 1));
+        i{font-size: 17px;
+       padding-right: 8.8px;}
+       &:active{
+        transform: scale(90%);
+        transition: .2s;
+       }
+        
+    }
+   }
+}
+.product_card{position: relative;
+    border: 1px solid red;
+    margin: 0 auto;
+    height: 422px;
+    width: 422px;
+    background: url(../image/stom_product.png);
+    input[type=radio] {display: none;
+    
+    &:checked+label:before{
+        background: rgba(255, 216, 1, 1);
+        transition: .5s; }}
+    label{position: relative;
+        cursor: pointer; 
+        z-index: 1;
+        @include Robo300(11px,rgba(38, 38, 38, 1) , 400);
+        text-transform: uppercase;
+        align-items: center;
+        padding-left: 29px;
+        height: 22.6px;
+
+     &:before{
+        content: '';
+        position: absolute;
+        height: 22.6px;
+        width: 103.6px;
+        background: #F2F2F2;
+        border-radius: 3px;
+        z-index: -1;
+        left: 0px;}
+    span.radio_word_curved{
+        position: absolute;
+        top:2px ;
+        left:18.7px}
+    span.radio_word_straight{
+        position: absolute;
+        top: 2.66px;
+        left: 29px;}}
+        .forma_2{  margin-top: 9.77px;}
+        .forma_3{position: relative;
+            margin-top: 18px;
+            label{
+                &:before{height: 22.6px;
+                    width: 134.7px;}
+            .gravirovka_ok{ position: relative;
+                left: -12px;
+                top: 3px; 
+            }}
+            input[type=checkbox]{
+                position: absolute;
+                left:0px;
+                z-index: 2;
+                top:3px;
+            }}
+                .video_review{
+                    position: absolute;
+                    bottom: 0px;
+                    right: 0px;
+                    margin-bottom: 9.6px;
+                    p{height: 32px;
+                        width: 49px; }
+                }
+                
+ }               }
+}
+}
+ }
