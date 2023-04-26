@@ -1,11 +1,11 @@
 @import 'nullstyle.scss';
-@mixin Robo300($font-size:16px,$color:rgba(38, 38, 38, 1),$font-weight: 300)
+@mixin Robo300($font-size:16px,$color:$black,$font-weight: 300)
    { font-family: 'Roboto', sans-serif;
      font-size:  $font-size;
      color: $color;
      font-weight:$font-weight;
 }
-@mixin Robo_Con($font-size:30px,$color:rgba(38, 38, 38, 1),$font-weight: 300)
+@mixin Robo_Con($font-size:30px,$color:$black,$font-weight: 300)
    { 
     font-family: 'Roboto Condensed', sans-serif;
      font-size:  $font-size;
@@ -15,10 +15,10 @@
 @mixin hoverUnderli{
     text-decoration: underline;
     text-decoration-line: 2px;
-    text-decoration-color:  rgba(255, 216, 1, 1);
+    text-decoration-color:  $yellow;
     text-underline-offset: 2px;}
 @mixin imgHover {content: '';
-    border: 1.5px solid rgba(255, 216, 1, 1);
+    border: 1.5px solid  $yellow;
     border-radius: 50%;
     position: absolute;
     left:28px;
@@ -33,6 +33,9 @@
     position: absolute;
     left:28px;
     top:-2px;}
+   
+    $yellow:rgba(255, 216, 1, 1);
+    $black: rgba(38, 38, 38, 1);
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -52,10 +55,13 @@ a{
     @include Robo300(14px,rgba(81, 81, 81, 1) ); 
     text-decoration: none;
 }
-h3{@include Robo300(22px,rgba(38, 38, 38, 1) );
+h3{@include Robo300(22px,$black );
     text-align: center;
     line-height:28px;
 }
+
+h5{@include Robo300(30px,$black , 300);}
+h6{ @include Robo300(40px,$black , 300)}
 // NAV
 
 nav{
@@ -80,7 +86,7 @@ nav{
               }
             &:last-child{position: relative;
                 margin-top: 0px;
-                margin-right: 0px;
+                margin-right: 0px; }}}}
                 div.link-socset{display:flex;
                     justify-content: end;
                     position: absolute;
@@ -91,15 +97,11 @@ nav{
                     top: 10px;
                     left: 16px;
                 &:nth-last-child(4){
-                    margin-right: 0px;
-                }
-            }}
-                    }}
-                }}
-
-
+                    margin-right: 0px; }}}
     //  Header/Верхняя панель
-    header {margin-bottom: 70px;
+    header {margin-bottom: 30px;
+        padding-bottom:1px;
+       
     .logo{
         display: flex;
         img{margin-right: 13px;
@@ -134,20 +136,31 @@ nav{
                         }
                     }
                 }
-                .sub-menu{ position: absolute;
-                    top: 7px;
-                    padding-top: 27px;
-                    li{ height: 34px;
+                .sub-menu{opacity: 0
+                    ;}
+         .menu:hover>
+        .sub-menu { opacity: 1;;
+            transition: .5s; 
+            position: absolute;
+                    top: 100%;
+                    left: 0;
+                    li{ display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 34px;
                     width: 178px;
                      border: 1px solid black;
                     border-radius: 5px;
-                    background-color:rgba(242, 242, 242, 1);
+                    background-color:rgba(242, 242, 242, 0.8);
                     font-size: 15px;
-                    font-weight: 300;}} 
-        .sub-menu{display: none;}
-        .menu>a:hover+.sub-menu { display: block;}
-        form{position: relative;}
-        .serch input[type="text"]{
+                    font-weight: 300;}
+                a{
+                    font-size: 16px;
+                };} 
+        
+        .search {
+            form{position: relative;}
+        input[type="text"]{
             position: relative;
             border-radius: 5px;
             background-color:rgba(242, 242, 242, 1);
@@ -157,8 +170,8 @@ nav{
 margin-top: 12px;
 margin-left: 30px;
 &::placeholder{ position: relative;
-left: 25px;}}
-.serch input[type="submit"]{position: absolute;
+left: 25px;}}}
+.search input[type="submit"]{position: absolute;
 right: 20px;
 top: 20px;
 background: url(../image/lupa.png) no-repeat center;
@@ -199,7 +212,8 @@ p::before{
     }
 
     // Картинки  перед меню
-    .interim{margin-bottom: 60px;}
+    .interim{margin-bottom: 34px;
+    margin-top: 34px;}
     .benefit ul{
         display: flex;
         justify-content: space-around;
@@ -256,11 +270,14 @@ menu{ margin-bottom: 70px;
                             @include imgCircle }
                             &:nth-of-type(8){
                                 &:hover>a{@include hoverUnderli;
-                                 &::before {@include imgHover}}
+                                 &::before {@include imgHover;
+                                    top: -4px;
+                                left:0px;}}
                                  &>a{border-left: none;
-                                padding-left: 70px; }}
+                                    padding-left: 57px;}}
                         &:nth-of-type(8)>a::before{
                             @include imgCircle(url('../image/total.png'));
+                            top: -4px;
                             left:0px; }
                             &:nth-of-type(9){
                                 &:hover>a{@include hoverUnderli;
@@ -290,30 +307,29 @@ menu{ margin-bottom: 70px;
                                 background:  #FFFFFF;
                                 position: absolute;
                                 bottom: -7px;
-                            &:hover{ background-color: rgba(255, 216, 1, 1);
+                            &:hover{ background-color:  $yellow;
                                 transition: .5s;
                             &:active{ background-color:rgb(237, 203, 13);
                                 transition: .2s;}} }}} 
  // Популярные наборы (карочки товаров)
  section{position: relative;
-    h1{ @include Robo300(40px,rgba(38, 38, 38, 1),100);
+    margin-bottom: 160px;
+    h1{ @include Robo300(40px,$black,100);
         margin-bottom: 67px;
 &::before{content: '';
 position: absolute;
 width:138px;
 height: 5px;
-background-color: rgba(255, 216, 1, 1);
+background-color:  $yellow;
 top:46px;}}
 .product{
-    ul{display: flex;
-  
-    flex-wrap: wrap;
-    column-gap: 29px;
-row-gap: 78px;
+    ul{display: grid;
+        grid-template-columns: repeat(auto-fill, 448px) ;
+        grid-template-rows: repeat(2,635px);
+        grid-column-gap: 29px;
+        grid-row-gap:78px;
 li{position: relative;
     padding: 23px 13px;
-    height: 635px;
-width: 448px;
 border-radius: 3px;
 border: 1px solid rgba(233, 233, 233, 1);
 
@@ -327,7 +343,6 @@ border: 1px solid rgba(233, 233, 233, 1);
     display: flex;
     justify-content: center;
     align-items: center;
-    
     p{@include Robo300(13px,rgba(0, 0, 0, 1) ,500)}
 }
 h3{margin-bottom: 19px;}
@@ -336,6 +351,8 @@ h3{margin-bottom: 19px;}
     grid-template-rows: 20px 20px;
     grid-column-gap:26px;
     margin-bottom: 14px;
+    position: absolute;
+    top: 98px;
 
     .price{grid-column: 1;
         grid-row: 1/3;
@@ -354,82 +371,323 @@ h3{margin-bottom: 19px;}
         height: 34px;
         width: 155px;
         border-radius: 5px;
-        border: 2px solid rgba(255, 216, 1, 1);
+        border: 2px solid  $yellow;
         background-color: rgba(255, 255, 255, 1);
         @include Robo300(17px, rgba(0, 0, 0, 1));
         i{font-size: 17px;
        padding-right: 8.8px;}
-       &:active{
-        transform: scale(90%);
-        transition: .2s;
-       }
-        
+       &:hover{background-color: $yellow;
+        transition: .3s;
+       &:active{transform: scale(90%);
+        transition: .2s; }}
     }
    }
 }
-.product_card{position: relative;
-    border: 1px solid red;
+.product_card1{
+    position: absolute;
+    top: 152px;
     margin: 0 auto;
     height: 422px;
     width: 422px;
-    background: url(../image/stom_product.png);
-    input[type=radio] {display: none;
-    
-    &:checked+label:before{
-        background: rgba(255, 216, 1, 1);
-        transition: .5s; }}
-    label{position: relative;
+   background: url(../image/1.png);}
+   .video_review{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    margin-bottom: 9.6px;
+    p{height: 32px;
+        width: 49px; } }
+        form{ position: absolute;
+         top:0px;
+         left:0px;
+input[type=radio] {display: none;
+&:checked+label:before{
+    background:  $yellow;
+    transition: .5s; }}
+    .forma_1{
+label {position: absolute;
+ top:0px;
+    cursor: pointer; 
+    z-index: 1;
+    @include Robo300(11px,$black, 400);
+    text-transform: uppercase;
+    align-items: center;
+    padding-left: 29px;
+    height: 22.6px;
+    span.radio_word_straight{
+     position: absolute;
+    top: 5.66px;
+     left: 29px;}
+&:before{
+   content: '';
+     position: absolute;
+    height: 22.6px;
+    width: 103.6px;
+    background: #F2F2F2;
+     border-radius: 3px;
+    z-index: -1;
+    left: 0px;}}}
+    .forma_2{ 
+    label {position: absolute;
+     top: 25px;
         cursor: pointer; 
         z-index: 1;
-        @include Robo300(11px,rgba(38, 38, 38, 1) , 400);
+        @include Robo300(11px,$black , 400);
         text-transform: uppercase;
         align-items: center;
         padding-left: 29px;
         height: 22.6px;
-
-     &:before{
-        content: '';
-        position: absolute;
+        span.radio_word_curved{
+         position: absolute;
+          top: 6px;
+         left:18.7px}
+    &:before{
+       content: '';
+         position: absolute;
         height: 22.6px;
         width: 103.6px;
         background: #F2F2F2;
-        border-radius: 3px;
+         border-radius: 3px;
         z-index: -1;
-        left: 0px;}
-    span.radio_word_curved{
-        position: absolute;
-        top:2px ;
-        left:18.7px}
-    span.radio_word_straight{
-        position: absolute;
-        top: 2.66px;
-        left: 29px;}}
-        .forma_2{  margin-top: 9.77px;}
-        .forma_3{position: relative;
-            margin-top: 18px;
-            label{
-                &:before{height: 22.6px;
-                    width: 134.7px;}
-            .gravirovka_ok{ position: relative;
-                left: -12px;
-                top: 3px; 
-            }}
-            input[type=checkbox]{
-                position: absolute;
-                left:0px;
-                z-index: 2;
-                top:3px;
-            }}
-                .video_review{
-                    position: absolute;
-                    bottom: 0px;
-                    right: 0px;
-                    margin-bottom: 9.6px;
-                    p{height: 32px;
-                        width: 49px; }
-                }
-                
- }               }
+        left: 0px;}}}
+    .forma_3{
+        label{ position: absolute;
+         top: 56px;
+         cursor: pointer; 
+        z-index: 1;
+        @include Robo300(11px,$black , 400);
+        text-transform: uppercase;
+        align-items: center;
+        padding-left: 29px;
+        height: 22.6px;
+            &:before{ content: '';
+             position: absolute;
+            height: 22.6px;
+            width: 134.7px;
+            background: #F2F2F2;
+             border-radius: 3px;
+            z-index: -1;
+            left: 0px;   
+         top:0px; }
+            span{        position: absolute;
+             top: 7px;
+             left: 18px;
+             white-space: nowrap;
+         }
+            }
+        }
+        input[type=checkbox]{
+            position: absolute;
+            left:0px;
+            z-index: 2;
+            top: 58px;
+        }}
+
+//  _____________
+ .product_card2{ 
+    position: absolute;
+    top: 152px;
+    margin: 0 auto;
+    height: 422px;
+    width: 422px;
+   background: url(../image/2.png);}
+   .product_card3{ 
+    position: absolute;
+    top: 152px;
+    margin: 0 auto;
+    height: 422px;
+    width: 422px;
+   background: url(../image/3.png);}
+   .product_card4{ 
+    position: absolute;
+    top: 152px;
+    margin: 0 auto;
+    height: 422px;
+    width: 422px;
+   background: url(../image/4.png);}
+   .product_card5{ 
+    position: absolute;
+    top: 152px;
+    margin: 0 auto;
+    height: 422px;
+    width: 422px;
+   background: url(../image/1.png);}
+   .product_card6{ 
+    position: absolute;
+    top: 152px;
+    margin: 0 auto;
+    height: 422px;
+    width: 422px;
+   background: url(../image/4.png);}
+   .product_card7{ 
+    position: absolute;
+    top: 152px;
+    margin: 0 auto;
+    height: 422px;
+    width: 422px;
+   background: url(../image/2.png);}
+   .product_card8{ 
+    position: absolute;
+    top: 152px;
+    margin: 0 auto;
+    height: 422px;
+    width: 422px;
+   background: url(../image/3.png);}
+               
+}              }
 }
+.catalog {width: 350px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 80px;
+   display: flex;
+    justify-content: center;
+    align-items:center;
+     cursor: pointer;
+button{ cursor: pointer;
+     position: relative;
+    @include Robo300(20px,$black
+    , 300);
+    text-align:center;
+  border: none;
+  background-color: transparent;
+
+    &::before{   
+        content: '';
+        position: absolute;
+        right: -84px;
+        top: -18px;
+width: 350px;
+height: 60px;
+background: #FFFFFF;
+border: 1px solid $yellow;
+border-radius: 5px;
+z-index: -1;}
 }
+&:hover>button::before{
+    background: $yellow;
+    transition: .2s;
+}}
  }
+//  Сотрудникик
+.staff{ height: 393x;
+    ul{display: grid;
+grid-template-columns: repeat(auto-fill,371px);
+grid-column-gap: 127px;
+
+li{display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{ margin-bottom: 8px;}
+.name{ 
+    padding-bottom: 5px;
+@include Robo300(20px,$black,400)}
+.specializing{
+    padding-bottom: 10px;
+    @include Robo300(16px,$black ,300)}
+    .insta{
+        position: relative;
+        @include Robo300(18px,$black,300);
+            &::before{
+                content:'';
+                background: url(../image/inst.png) no-repeat center;
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                left: -30px;}
+    }
+}}
+}
+// Отзывы
+#review{ margin-top: 24px;
+    margin-bottom: 125px;
+    ul{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,435px);
+        grid-column-gap: 42px;
+        h4{@include Robo300(20px,$black , 400);
+            line-height: 23px;}
+            .review--text{ padding-top: 10px;
+                @include Robo300(18px, $black, 300);
+                line-height: 161.19%
+            } 
+    }
+}
+// О компании
+ section#about{
+    margin-top: 125px;
+    width: 1193.6px;
+    margin: 0 auto;
+    h1{margin-bottom: 40px;}
+    p{ @include Robo300(20px,$black, 300);
+        margin-bottom: 7px;
+        width: 1193.6px;
+        line-height: 28px;
+&.gap{margin-bottom: 15px;}}
+    span{font-weight: 400;
+        @include Robo300(20px$black , 400);}
+    ul{
+li{margin-bottom: 8px;
+padding-left: 8px;
+    font-weight: 300;
+    @include Robo300(20px,$black , 300);
+&:before{
+    content: '\2014';
+    position: relative;
+    left: -5px;
+    width: 10px;
+
+}}
+    
+ }
+
+ }
+//  Подвал
+footer .container {display: flex;
+    justify-content: space-around;
+    margin-top: 200px;
+    h5{
+        margin-bottom: 27px;}
+.variety--footer ul{
+display: grid;
+grid-template-columns: repeat(2, 392px);
+grid-template-rows: 456px;}
+li a{ @include Robo300(18px,$black , 300);
+       line-height: 38px; }
+   .repeat--telephone { margin-top: 25px;
+   a {@include Robo300(22px,$black, 500);
+    border-bottom: 1px solid black;}  }  
+}
+
+// Акции
+.sale{ h6{
+    margin-top: 60px;
+    margin-left: 30px;}
+    p{
+        margin-left: 30px;
+       margin-top: 20px;
+       font-size: 20px;
+       border-bottom: $yellow 2px solid;
+       width: 397px;
+
+    }
+
+}
+// Посещенные сраницы
+.visit{
+    ul{ display: flex;
+    justify-content: start;
+a{@include Robo300(14px,$black , 300);
+padding-right: 24px;
+text-decoration: underline;}
+li:first-of-type{position: relative;
+    a:after{
+    content:'\2014';
+    position: absolute;
+    width: 13px;
+    top: 3px;
+    right: 4px;
+
+
+}}}}
