@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//  do{var firstnameStr = prompt ( 'Введите вашу фамилию');
+// var firstname = parseFloat(firstnameStr)}
+//  while ((firstnameStr == null)||(firstnameStr == '')||(!isNaN(firstname)))
+
+//  do{var nameStr = prompt ( 'Введите ваше имя');
+// var name = parseFloat(nameStr)}
+// while ((nameStr == null)||(nameStr == '')||(!isNaN(name)));
+
+// do{var surnameStr = prompt ( 'Введите ваше отчество');
+// var surname = parseFloat(surnameStr)}
+// while((surnameStr == null)||(surnameStr == '')||(!isNaN(surname)));
+  // ваше ФИО: ${firstnameStr} ${nameStr} ${surnameStr} 
+            // ваш возраст в годах: ${dayAge}
+
+ do{var ageStr = prompt ( 'Введите ваш возраст');
+ var age = parseFloat(ageStr)}
+ while((ageStr == null)||(ageStr == '')|| isNaN(age)|| age>=100 )
+var dayAge = age*365;
+var five= age+5;
+
+ var sex = confirm ('Ваш пол женский?');
+ if (sex==true)
+ {sex='Женщина'}
+ else
+{sex='Мужчина'};
+
+var pens ;
+if ((sex==true) && (age>=58))
+pens='Да';
+ else if ((sex==true) && (age<58))
+pens='Нет';
+else if ((sex==false) && (age>=63))
+pens='Да';
+else
+pens='Нет';
+
+var result = ` 
+          
+            через 5 лет вам будет: ${five}
+            ваш пол: ${sex}
+            вы на пенсии: ${pens}`
+
+ alert(result);
+
+
+    </script>
+</body>
+</html>
