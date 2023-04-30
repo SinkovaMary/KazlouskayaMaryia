@@ -29,27 +29,28 @@ var dayAge = age*365;
 var five= age+5;
 
  var sex = confirm ('Ваш пол женский?');
- if (sex==true)
- {sex='Женщина'}
+ if (sex===false)
+ {sex='Мужчина'}
  else
-{sex='Мужчина'};
+{sex='Женщина'};
 
-var pens ;
-if ((sex='Женщина') && (age>=58))
-pens='Да';
- else if ((sex='Женщина') && (age<58))
-pens='Нет';
-else if ((sex='Мужчина') && (age>=63))
-pens='Да';
-else
-pens='Нет';
+// var pens = 'Да';
+// if ((sex===true) && (age>=58))
+// pens='Да';
+//  else if ((sex===true) && (age<58))
+// pens='Нет';
+// else if ((sex=== false) && (age>=63))
+// pens='Да';
+// else
+// pens='Нет';
+// вы на пенсии: ${pens}`
 
 var result = ` 
             ваше ФИО: ${firstnameStr} ${nameStr} ${surnameStr} 
             ваш возраст в годах: ${dayAge}
             через 5 лет вам будет: ${five}
-            ваш пол: ${sex}
-            вы на пенсии: ${pens}`
+            ваш пол: ${sex}`
+           
 
  alert(result);
 
