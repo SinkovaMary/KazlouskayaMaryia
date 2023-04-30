@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
- var firstnameStr = prompt ( 'Введите вашу фамилию');
+   var firstnameStr = prompt ( 'Введите вашу фамилию');
  while (true){
     var firstname = parseFloat(firstnameStr);
     if ((firstnameStr == null))
@@ -17,7 +17,8 @@
     firstnameStr = prompt ( 'Введите вашу фамилию корректно');
      else if ((isNaN(firstname)))
      break;
- firstnameStr = prompt ( 'Введите вашу фамилию корректно');
+     else
+     firstnameStr = prompt ( 'Введите вашу фамилию корректно');
 }
 
  var nameStr = prompt ( 'Введите ваше имя');
@@ -29,7 +30,8 @@
      nameStr = prompt ( 'Введите ваше имя корректно');
      else if ((isNaN(name)))
      break;
-     nameStr = prompt ( 'Введите ваше имя корректно');
+     else
+     firstnameStr = prompt ( 'Введите ваше имя корректно');
 }
 
 
@@ -42,7 +44,8 @@ while (true){
      surnameStr = prompt ( 'Введите ваше отчество корректно');
      else if ((isNaN(surname)))
      break;
-     surnameStr = prompt ( 'Введите ваше отчество корректно');
+     else
+     firstnameStr = prompt ( 'Введите вашу фамилию корректно');
 }
 
  var ageStr = prompt ( 'Введите ваш возраст');
@@ -54,8 +57,11 @@ while (true){
      ageStr = prompt ( 'Введите ваш возраст корректно');
      else if ((isNaN(age)))
      ageStr = prompt ( 'Введите ваш возраст корректно');
-     else if ((age<=100))
+     else if ((age>=100))
+     ageStr = prompt ( 'Введите ваш возраст корректно');
+     else if ((age>=0))
      break;
+     else
      ageStr = prompt ( 'Введите ваш возраст корректно');
 }
 
@@ -75,18 +81,14 @@ pens='Да';
 else  
 pens='Нет';
 
-
-
 var result = ` 
             ваше ФИО: ${firstnameStr} ${nameStr} ${surnameStr} 
             ваш возраст в годах: ${age*365}
             через 5 лет вам будет: ${age+5}
             ваш пол: ${sex}
             вы на пенсии: ${pens}`
-           
 
  alert(result);
-
 
     </script>
 </body>
