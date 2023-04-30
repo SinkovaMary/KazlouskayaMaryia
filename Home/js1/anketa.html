@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ var firstnameStr = prompt ( 'Введите вашу фамилию');
+ while (true){
+    var firstname = parseFloat(firstnameStr);
+    (firstnameStr == null)?
+    firstnameStr = prompt ( 'Введите вашу фамилию корректно')
+    : (firstnameStr == '')?
+    firstnameStr = prompt ( 'Введите вашу фамилию корректно')
+:(isNaN(firstname))
+     break;
+ firstnameStr = prompt ( 'Введите вашу фамилию корректно');
+}
+
+ var nameStr = prompt ( 'Введите ваше имя');
+ while (true){
+    var name = parseFloat(nameStr);
+    (nameStr == null)?
+    nameStr = prompt ( 'Введите ваше имя корректно'):
+    (nameStr == '')?
+     nameStr = prompt ( 'Введите ваше имя корректно'):
+     (isNaN(name))
+     break;
+     nameStr = prompt ( 'Введите ваше имя корректно');
+}
+
+
+var surnameStr = prompt ( 'Введите ваше отчество');
+while (true){
+    var surname = parseFloat(surnameStr);
+    (surnameStr == null)?
+    surnameStr = prompt ( 'Введите ваше отчество корректно'):
+    (surnameStr == '')?
+     surnameStr = prompt ( 'Введите ваше отчество корректно'):
+    (isNaN(surname))
+     break;
+     surnameStr = prompt ( 'Введите ваше отчество корректно');
+}
+
+ var ageStr = prompt ( 'Введите ваш возраст');
+ while (true){
+    var age = parseFloat(ageStr);
+    (ageStr == null)?
+    ageStr = prompt ( 'Введите ваш возраст корректно'):
+    (ageStr == '')?
+     ageStr = prompt ( 'Введите ваш возраст корректно'):
+     (isNaN(age))?
+     ageStr = prompt ( 'Введите ваш возраст корректно'):
+    (age<=100)
+     break;
+     ageStr = prompt ( 'Введите ваш возраст корректно');
+}
+
+ var sex = confirm ('Ваш пол женский?'); 
+ sex==true?sex='Женщина':sex='Мужчина';
+
+var pens ;
+(sex==='Женщина') && (age>=58)?
+pens='Да':
+ (sex==='Женщина') && (age<58)?
+pens='Нет':
+(sex==='Мужчина') && (age>=63)?
+pens='Да': 
+pens='Нет';
+
+
+
+var result = ` 
+            ваше ФИО: ${firstnameStr} ${nameStr} ${surnameStr} 
+            ваш возраст в годах: ${age*365}
+            через 5 лет вам будет: ${age+5}
+            ваш пол: ${sex}
+            вы на пенсии: ${pens}`
+           
+
+ alert(result);
+
+
+    </script>
+</body>
+</html>
