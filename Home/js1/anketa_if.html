@@ -59,21 +59,18 @@ while (true){
      ageStr = prompt ( 'Введите ваш возраст корректно');
 }
 
-var dayAge = age*365;
-var five= age+5;
-
  var sex = confirm ('Ваш пол женский?');
- if (sex===true)
+ if (sex==true)
  {sex='Женщина'}
  else
 {sex='Мужчина'};
 
 var pens ;
-if ((sex='Женщина') && (age>=58))
+if ((sex==='Женщина') && (age>=58))
 pens='Да';
- else if ((sex='Женщина') && (age<58))
+ else if ((sex==='Женщина') && (age<58))
 pens='Нет';
-else if ((sex='Мужчина') && (age>=63))
+else if ((sex==='Мужчина') && (age>=63))
 pens='Да';
 else  
 pens='Нет';
@@ -82,8 +79,8 @@ pens='Нет';
 
 var result = ` 
             ваше ФИО: ${firstnameStr} ${nameStr} ${surnameStr} 
-            ваш возраст в годах: ${dayAge}
-            через 5 лет вам будет: ${five}
+            ваш возраст в годах: ${age*365}
+            через 5 лет вам будет: ${age+5}
             ваш пол: ${sex}
             вы на пенсии: ${pens}`
            
