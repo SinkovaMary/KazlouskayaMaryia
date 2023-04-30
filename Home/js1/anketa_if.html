@@ -8,19 +8,19 @@
 </head>
 <body>
     <script>
-//  do{var firstnameStr = prompt ( 'Введите вашу фамилию');
-// var firstname = parseFloat(firstnameStr)}
-//  while ((firstnameStr == null)||(firstnameStr == '')||(!isNaN(firstname)))
+ do{var firstnameStr = prompt ( 'Введите вашу фамилию');
+var firstname = parseFloat(firstnameStr)}
+ while ((firstnameStr == null)||(firstnameStr == '')||(!isNaN(firstname)))
 
-//  do{var nameStr = prompt ( 'Введите ваше имя');
-// var name = parseFloat(nameStr)}
-// while ((nameStr == null)||(nameStr == '')||(!isNaN(name)));
 
-// do{var surnameStr = prompt ( 'Введите ваше отчество');
-// var surname = parseFloat(surnameStr)}
-// while((surnameStr == null)||(surnameStr == '')||(!isNaN(surname)));
-  // ваше ФИО: ${firstnameStr} ${nameStr} ${surnameStr} 
-            // ваш возраст в годах: ${dayAge}
+ do{var nameStr = prompt ( 'Введите ваше имя');
+var name = parseFloat(nameStr)}
+while ((nameStr == null)||(nameStr == '')||(!isNaN(name)));
+
+do{var surnameStr = prompt ( 'Введите ваше отчество');
+var surname = parseFloat(surnameStr)}
+while((surnameStr == null)||(surnameStr == '')||(!isNaN(surname)));
+ 
 
  do{var ageStr = prompt ( 'Введите ваш возраст');
  var age = parseFloat(ageStr)}
@@ -35,17 +35,18 @@ var five= age+5;
 {sex='Мужчина'};
 
 var pens ;
-if ((sex==true) && (age>=58))
+if ((sex='Женщина') && (age>=58))
 pens='Да';
- else if ((sex==true) && (age<58))
+ else if ((sex='Женщина') && (age<58))
 pens='Нет';
-else if ((sex==false) && (age>=63))
+else if ((sex='Мужчина') && (age>=63))
 pens='Да';
 else
 pens='Нет';
 
 var result = ` 
-          
+            ваше ФИО: ${firstnameStr} ${nameStr} ${surnameStr} 
+            ваш возраст в годах: ${dayAge}
             через 5 лет вам будет: ${five}
             ваш пол: ${sex}
             вы на пенсии: ${pens}`
