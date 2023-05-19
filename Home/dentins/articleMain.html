@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,24 @@
     <title>Dentins</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Roboto+Condensed:ital,wght@0,300;0,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet"  type="text/css" href="scss/all.css">
-<link rel="stylesheet" href="scss/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Roboto:wght@100;300;400;500&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Roboto+Condensed:ital,wght@0,300;0,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="scss/all.css">
+    <link rel="stylesheet" href="scss/style.css">
 
 </head>
+
 <body>
-  <!-- Навигация -->
-  <nav>
+   <!-- Навигация -->
+   <nav>
     <div class="container">
         
         <ul>
-            <li><div class="logo--nav"> <img src="image/logo.png" alt="logo">
+            <li><div class="logo--nav"> <img src="image/logo.png" alt="logo" title="Логотип">
                 <a href="index.html">
                     <h1>Dentins</h1>
                 </a>
@@ -48,7 +54,7 @@
         <div class="info">
             <ul>
                 <li>
-                    <div class="logo"> <img src="image/logo.png" alt="logo">
+                    <div class="logo"> <img src="image/logo.png" alt="logo" title="Логотип">
                         <a href="index.html">
                             <h1>Dentins</h1>
                         </a>
@@ -88,55 +94,69 @@
         </div>
     </div>
 </header>
-         <!-- Посещеннве страницы -->
-        <div class="visit">
-            <div class="container">
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="sale.html">Акции</a></li>
-                </ul>
-            </div>
-        </div> 
-    
-    <!-- Картинки  перед меню -->
-<div class="interim">
-    <div class="container">
-        <div class="benefit">
+    <!-- Посещеннве страницы -->
+    <div class="visit">
+        <div class="container">
             <ul>
-                <li><img src="image/car.png" alt="delivery">
-                    <p>Доставка в день заказа, <br> при оформлении до 12:00</p>
-                </li>
-                <li>
-                    <img src="image/sale.png" alt="sale">
-                    <p>Скидка 10% при покупке <br>от 3-х инструментов</p>
-                </li>
-                <li>
-                    <img src="image/wallet.png" alt="money">
-                    <p>3% от заказа возвращаются <br>в виде бонусных баллов</p>
-                </li>
-                <li>
-                    <img src="image/phone.png" alt="phone">
-                    <p>Мы на WhatsApp 24/7 <br>Работаем без выходных</p>
-                </li>
+                <li><a href="index.html">Главная</a></li>
+                <li class="dash"><a href="articles.html">Статьи</a></li>
+                <li><a href="articleMain.html"> Ржавчина на стоматологических инструментах</a></li>
             </ul>
         </div>
-
     </div>
-</div>
 
-<!-- Акции -->
-<section class="sale">
-    <div class="container">
-        <h6>Акции</h6>
-        <p>В настоящее время нет актуальных Акций</p>
-
+    <!-- Полная статья-->
+    <div class="total--article">
+        <div class="container">
+            <h5>Ржавчина на стоматологических инструментах</h5>
+            <div class="article--img">
+                <img src="image/articles1.webp" alt="Ржавчина на стоматологических инструментах"
+                    title="Ржавчина на стоматологических инструментах">
+            </div>
+            <div class="text--article">
+                <p>Стоматологические инструменты изготавливают из нержавеющей медицинской стали, которая имеет свойство
+                    не ржаветь при правильном уходе. Устойчивость нержавеющей стали к коррозии обеспечивается за счет
+                    формирования на ее поверхности пассивного слоя (слой оксида хрома).</p>
+                <p>Пассивный слой обладает высокой устойчивостью к действию химических соединений и атмосферным
+                    воздействиям. Тем не менее, представление о том, что нержавеющая сталь абсолютно не подвержена
+                    коррозии — ошибочно. Даже этот материал может быть поврежден в результате внешних воздействий, таких
+                    как отсутствие необходимого ухода или неправильное обращение.</p>
+                <p>Для очистки инструментов из нержавеющей стали <strong>НЕ рекомендуется</strong> применять
+                    дезинфицирующие и чистящие средства, в состав которых входят следующие вещества: хлор, щавелевая
+                    кислота, перекись водорода (Н202). Несоблюдение этих рекомендаций может привести к точечной и
+                    контактной коррозии.</p>
+                <p></p>
+            </div>
+            <div class="comment--article">
+                <a href="#openModal">Комментарии</a>
+                <div id="openModal" class="modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3> Комментарии</h3>
+                                <a href="#close" title="Close" class="close">×</a>
+                            </div>
+                            <div class="modal-body">
+                                <form action="http://fe.it-academy.by/TestForm.php">
+                                   <p>Имя</p>
+                                    <input type="text"  name="name" minlength="4" maxlength="10"><br>
+                                    <p>Email</p>
+                                    <input type="email" id="email" name="email"><br>
+                                    <p>Комментарий</p>
+                                    <textarea name="comment" id="comment" cols="30" rows="5"></textarea><br>
+                                    <input type="submit" value="Отправить">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
-</section>
 
- <!-- Подвал -->
+<!-- Подвал -->
  
- <div class="container">
+<div class="container">
     <footer>
     <div class="variety--footer">
         <h5>Ассортимент</h5>
@@ -192,5 +212,7 @@
     </div>
 </footer>
 </div>
+
 </body>
+
 </html>
