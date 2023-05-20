@@ -239,7 +239,7 @@
 
   header {
     margin-top: 5px;
-    margin-bottom: 50px; }
+    margin-bottom: 30px; }
 
   .search input[type="text"] {
     width: 250px; }
@@ -361,7 +361,7 @@
     justify-content: space-between; }
 
   .repeat--contacts {
-    margin-right: 210px; }
+    margin-right: 150px; }
 
   section .product ul li:nth-last-of-type(5) {
     display: none; }
@@ -373,6 +373,16 @@
     grid-template-columns: repeat(1, 450px);
     grid-template-rows: repeat(2, 610px);
     justify-content: center; }
+
+  section.text-about p {
+    font-size: 18px;
+    line-height: 24px; }
+
+  section.text-about ul li {
+    font-size: 18px; }
+
+  h5 {
+    font-size: 26px; }
 
   .staff ul .review3 {
     display: none; }
@@ -398,5 +408,124 @@
 
   .top--description .title--description .price .price-number {
     font-size: 24px; } }
+@media all and (max-width: 700px) {
+  .container {
+    width: 500px; }
+
+  nav ul {
+    justify-content: space-between; }
+    nav ul li:nth-last-of-type(1), nav ul li:nth-last-of-type(2), nav ul li:nth-last-of-type(4), nav ul li:nth-last-of-type(5), nav ul li:nth-last-of-type(6) {
+      display: none; }
+
+  nav ul li a {
+    font-size: 14px; }
+
+  .info > ul {
+    justify-content: space-between; }
+
+  .search input[type="text"] {
+    width: 300px; }
+
+  .telephone {
+    display: none; }
+
+  .card p {
+    display: none; }
+
+  .card img {
+    display: block; }
+
+  .profile img {
+    display: block; }
+
+  .profile span {
+    display: none; }
+
+  .profile span:nth-of-type(2) {
+    display: none; }
+
+  menu {
+    justify-content: center; }
+
+  menu p {
+    text-align: center;
+    margin-top: 5px; }
+
+  menu li button {
+    font-weight: 300;
+    height: 30px;
+    width: 100px;
+    font-size: 13px; }
+
+  menu li:nth-of-type(9), menu li:nth-of-type(10), menu li:nth-of-type(11), menu li:nth-of-type(12) {
+    display: none; }
+
+  .catalog {
+    width: 250px;
+    height: 50px; }
+
+  .staff {
+    margin-bottom: 100px; }
+
+  .staff ul li img {
+    width: 150px;
+    height: 150px; }
+
+  .staff ul li h4 {
+    font-size: 18px; }
+
+  section.text-about ul li {
+    font-size: 14px; }
+
+  .staff ul .swipe {
+    background-size: 50%;
+    width: 40px;
+    height: 40px; }
+
+  .staff ul li .review--text {
+    font-size: 14px; }
+
+  section.text-about p {
+    font-size: 14px; }
+
+  li a {
+    font-size: 14px; }
+
+  section.text-about h2 {
+    font-size: 26px; }
+
+  footer {
+    flex-direction: column;
+    margin-top: 100px; }
+
+  footer .variety--footer {
+    display: none; }
+
+  footer .repeat--contacts {
+    margin-top: 20px; }
+
+  .repeat--header ul li a {
+    line-height: 30px; }
+
+  h5 {
+    font-size: 24px;
+    margin-bottom: 25px; }
+
+  .top--description, .product--description {
+    flex-direction: column;
+    align-content: center; }
+
+  .accordeonWrapper {
+    width: 100px;
+    align-self: center; }
+
+  .tabs--description {
+    margin: 50px 0px 0px 0px; }
+
+  .top--description .title--description h5 {
+    margin: 20px 0px 30px; }
+
+  p {
+    font-size: 14px; } }
 
 /*# sourceMappingURL=media.css.map */

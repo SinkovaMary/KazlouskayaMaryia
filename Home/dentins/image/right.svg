@@ -1,0 +1,7 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 30" width="42" height="30">
+	<title>left-svg</title>
+	<style>
+		.s0 { fill: #545454 } 
+	</style>
+	<path id="Layer" class="s0" d="m41.4 12.6c0.8 0.8 0.8 2 0 2.8l-12.7 12.7c-0.8 0.8-2.1 0.8-2.8 0-0.8-0.7-0.8-2 0-2.8l11.3-11.3-11.3-11.3c-0.8-0.8-0.8-2.1 0-2.8 0.7-0.8 2-0.8 2.8 0zm-1.4 3.4h-40v-4h40z"/>
+</svg>

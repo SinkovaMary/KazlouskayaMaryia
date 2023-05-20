@@ -341,6 +341,7 @@ header {
 .profile {
   align-self: center;
   margin-right: 56px;
+  img{display: none;}
   span:nth-of-type(2) {
     @include Robo300;
     &:hover {
@@ -362,6 +363,7 @@ header {
   align-self: center;
   position: relative;
   margin-top: 6px;
+  img{display: none;}
   p:hover {
     color: $yellow;
   }
@@ -982,15 +984,44 @@ section {
   
   ul {
     display: grid;
-    grid-template-columns: repeat(4, 430px);
-    grid-column-gap: 44px;
+    grid-template-columns: repeat(4, 350px);
+    justify-content: space-around;
     align-items: start;
+    .swipe {
+      cursor: pointer;
+      position: absolute;
+      background-image: url(../image/left.svg);
+      background-size: 70%;
+      background-position: center;
+      background-repeat: no-repeat;
+      width:50px;
+      height: 50px;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      box-shadow: 5px 5px 10px rgba(63, 62, 62, 0.5);
+      background-color: transparent;
+      top: 35%;
+  }
+  .swipe.right {
+    right: 0%;
+    rotate: 180deg;
+    box-shadow: 5px -5px 10px rgba(63, 62, 62, 0.5);
+}
+.swipe:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
+}
+.swipe:active{
+  transition: all 0.5s;
+  transform: scale(0.8);
+}
 
     li {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+     
      .review1 {
         display:block;
         display: flex;
