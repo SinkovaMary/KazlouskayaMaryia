@@ -4,6 +4,10 @@
   height: 100%;
   position: relative;
 }
+@mixin hoverNav {
+  border: none;
+}
+
 
 @media all and (max-width: 1880px) {
   .container {
@@ -230,6 +234,7 @@
     li {
       margin-left: 20px;
       margin-bottom: 10px;
+      button{margin-top: 10px;}
       a {
         padding-right: 7px;
         font-size: 23px;
@@ -407,6 +412,9 @@
       font-size: 22px;
     }
   }
+ nav ul li:nth-of-type(1) a:hover{
+  border: none;
+ }
   nav ul li a {
     font-size: 14px;
   }

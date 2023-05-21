@@ -22,7 +22,7 @@
 @mixin hoverNav {
   border: 1px solid rgba(38, 38, 38, 0.5);
   border-radius: 12px;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 @mixin imgCatalog($background: url()) {
@@ -45,7 +45,7 @@
   border: 1.5px solid $yellow;
   border-radius: 50%;
   position: absolute;
-  left: 28px;
+  left: 18px;
   top: -2px;
 }
 @mixin imgCircle($background: url("../image/box.png")) {
@@ -163,9 +163,7 @@ nav {
     li {
       position: relative;
       margin-right: 20px;
-      &:first-of-type a:hover {
-        @include hoverNav;
-      }
+      
       &:nth-child(2) a:hover {
         @include hoverNav;
       }
@@ -176,6 +174,9 @@ nav {
         @include hoverNav;
       }
       &:nth-child(5) a:hover {
+        @include hoverNav;
+      }
+      &:nth-child(6) a:hover {
         @include hoverNav;
       }
       &:last-child {
@@ -260,6 +261,7 @@ header {
 }
 .sub-menu {
   opacity: 0;
+  ;
 }
 .menu:hover > .sub-menu {
   opacity: 1;
@@ -269,6 +271,7 @@ header {
   left: 0;
   box-shadow: 18px 13px 8px -4px rgba(34, 60, 80, 0.2);
   border: 1px solid #ddd;
+  z-index: 2;
   li {
     display: flex;
     justify-content: start;
@@ -841,7 +844,7 @@ section {
               span {
                 position: absolute;
                 top: 7px;
-                left: 18px;
+                left: 22px;
                 white-space: nowrap;
               }
             }
@@ -951,6 +954,7 @@ section {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    
     button {
       cursor: pointer;
       position: relative;
@@ -972,7 +976,7 @@ section {
         z-index: -1;
       }
     }
-    &:hover > button::before {
+    &:hover  button::before {
       background: $yellow;
       transition: 0.2s;
     }
